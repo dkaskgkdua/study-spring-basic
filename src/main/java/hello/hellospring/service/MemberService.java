@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 // ctrl + shift + T : 테스트 케이스 작성
-@Service
+//@Service
 public class MemberService {
     private final MemberRepository memberRepository;
-    @Autowired
+    //@Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
