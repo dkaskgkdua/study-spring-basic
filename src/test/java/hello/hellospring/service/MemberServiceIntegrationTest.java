@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,7 @@ class MemberServiceIntegrationTest {
 // 기본적으로 DI에서 생성자주입을 권장한다고 하지만 테스트의 경우
 // 필드 주입을 해도 크게 상관없음(한번 쓰고 끝남)
     @Autowired MemberService memberService;
+    @Qualifier("springDataJpaMemberRepository")
     @Autowired MemberRepository memberRepository;
 
     @Test
