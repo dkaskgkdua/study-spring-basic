@@ -1,7 +1,14 @@
 package hello.hellospring.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
+    // 오라클은 GenerationType.Seq...
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name ="name")
     private String name;
 
     public Long getId() {
